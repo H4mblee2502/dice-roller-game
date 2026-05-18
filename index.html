@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll Dice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="diceContent">
+        <h2>🎲 Dice Roller🎲 </h2>
+        <h1 id="resultWinner"></h1>
+    
+        <table>
+            <tr>
+                <td>
+                    <h4 id="player1">Player 1</h4>
+                </td>
+                <td>
+                    <h4 id="player2">Player 2</h4>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <img src="diceImg/1.png" width="150px" id="player1Img">
+                </td>
+                <td>
+                     <img src="diceImg/2.png" width="150px" id="player2Img">
+                </td>
+            </tr>
+            <tr>
+                 <td colspan="2">
+                    <button onclick="rollDice()">Roll Dice</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+    <script src="diceProgram.js"></script>
+</body>
+</html>
