@@ -1,8 +1,14 @@
 *{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-
+    box-sizing: border-box;
 }
 body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-image: url(background/green.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,16 +16,20 @@ body{
     background-attachment: fixed;
 }
 .diceContent{
-    height: auto;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     color: white;
 }
 .diceContent h1, h2{
     font-weight:900;
     font-size: 55px;
+    margin: 10px 0;
 }
 h2{
     margin: 0;
@@ -56,4 +66,48 @@ button:hover{
     color: #fff;
     border: 1px solid rgb(0, 70, 12);
     box-shadow: inset 0 0 0 10em rgb(0, 0, 0);
+}
+
+@media screen and (max-width: 1024px) {
+    .diceContent h1, .diceContent h2 {
+        font-size: 45px;
+    }
+    table img{
+        width: 130px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .diceContent{
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .diceContent h1, .diceContent h2 {
+        text-align: center;
+        font-size: 32px;
+    }
+    table img{
+        width: 110px;
+    }
+    table {
+        border-spacing: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .diceContent h1, .diceContent h2 {
+        font-size: 24px;
+    }
+    .diceContent h4 {
+        font-size: 16px;
+    }
+
+    table img{
+        width: 85px;
+    }
+    button {
+        font-size: 15px;
+        padding: 4px 12px;
+    }
+    
 }
