@@ -1,4 +1,8 @@
-let playerName = prompt("Please enter your name", "Player 1")
+let playerName;
+do{
+   playerName = prompt("Please enter your name", "Player 1");
+} while (playerName === null || playerName.trim() === "");
+
 
 let heading = document.getElementById("player1");
 
@@ -21,10 +25,10 @@ function rollDice(){
     let resultHeading = document.getElementById("resultWinner");
 
     if(playerOne > playerTwo){
-        resultHeading.textContent =`🚩 ${playerName} Wins!`;
+        resultHeading.textContent =`${playerName} Wins!`;
 }
 else if (playerTwo > playerOne){
-    resultHeading.textContent ="Player 2 Wins! 🚩";
+    resultHeading.textContent ="Player 2 Wins! ";
 }
 else {
     resultHeading.textContent = "🎲 It's a Draw! 🎲";

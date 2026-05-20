@@ -8,35 +8,22 @@
 </head>
 <body>
     <div class="diceContent">
-        <h2>🎲 Dice Roller🎲 </h2>
-        <h1 id="resultWinner"></h1>
-    
-        <table>
-            <tr>
-                <td>
-                    <h4 id="player1">Player 1</h4>
-                </td>
-                <td>
-                    <h4 id="player2">Player 2</h4>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <img src="diceImg/1.png" width="150px" id="player1Img">
-                </td>
-                <td>
-                     <img src="diceImg/2.png" width="150px" id="player2Img">
-                </td>
-            </tr>
-            <tr>
-                 <td colspan="2">
-                    <button onclick="rollDice()">Roll Dice</button>
-                </td>
-            </tr>
-        </table>
+        <h2>🎲 Dice Roller 🎲</h2>
+        <h2 id="resultWinner">Press Roll!</h2>
+        
+        <div class="playersContainer">
+            <div class="player">
+                <h4 id="player1">Player 1</h4>
+                <img src="diceImg/1.png" alt="Dice 1" id="player1Img">
+            </div>
+            <div class="player">
+                <h4 id="player2">Banker</h4>
+                <img src="diceImg/2.png" alt="Dice 2" id="player2Img">
+            </div>
+        </div>
+
+        <button onclick="rollDice()">Roll Dice</button>
     </div>
-
-
 
     <script src="diceProgram.js"></script>
 </body>

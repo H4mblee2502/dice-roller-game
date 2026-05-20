@@ -1,113 +1,90 @@
-*{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    box-sizing: border-box;
-}
-body{
-    height: 100%;
+* {
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     background-image: url(background/green.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
     background-attachment: fixed;
-}
-.diceContent{
-    height: 100%;
-    width: 100%;
-    padding: 20px;
+    
+    /* Fixed: Centering the main card on the screen */
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.diceContent {
+    background-color: rgba(0, 0, 0, 0.4); /* Optional: Adds a dark tint so text pops against green background */
+    border-radius: 20px;
+    min-width: 500px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Evenly spaces the title, players, and button */
     text-align: center;
     color: white;
 }
-.diceContent h1, h2{
-    font-weight:900;
-    font-size: 55px;
-    margin: 10px 0;
-}
-h2{
+
+.diceContent h2 {
+    font-weight: 900;
+    font-size: 40px; /* Slightly scaled down so it doesn't crowd smaller screens */
     margin: 0;
 }
 
-.diceContent h4{
-    font-size: 20px;
+#resultWinner {
+    font-size: 30px;
+    color: #ffe600; /* Makes the winner text stand out */
+    min-height: 40px; /* Keeps layout stable before the first roll */
 }
-table{
-    text-align: center;
-    color: white;
-    border-spacing: 20px;
+
+/* New: Handles the side-by-side layout for players */
+.playersContainer {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 20px 0;
 }
-table img{
+
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.player h4 {
+    font-size: 24px;
+}
+
+.player img {
     border-radius: 25px;
-    border: none;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Gives the dice some depth */
+    width: 150px;
 }
-button{
-    font-size: 17px;
-    border: none;
-    border-radius: 20px;
+
+button {
+    font-size: 18px;
     cursor: pointer;
     background: transparent;
-    border: 1px solid #fff;
+    border: 2px solid #fff;
     border-radius: 25px;
-    padding: 5px 15px;
-    transition: color 0.3s 0.1s ease-out;
+    padding: 10px 25px;
     color: #fff;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
-button::before{
-    transition: box-shadow 0.5s ease-out;
-}
-button:hover{
+
+button:hover {
     color: #fff;
-    border: 1px solid rgb(0, 70, 12);
-    box-shadow: inset 0 0 0 10em rgb(0, 0, 0);
-}
-
-@media screen and (max-width: 1024px) {
-    .diceContent h1, .diceContent h2 {
-        font-size: 45px;
-    }
-    table img{
-        width: 130px;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .diceContent{
-        padding: 20px;
-        box-sizing: border-box;
-    }
-    .diceContent h1, .diceContent h2 {
-        text-align: center;
-        font-size: 32px;
-    }
-    table img{
-        width: 110px;
-    }
-    table {
-        border-spacing: 10px;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .diceContent h1, .diceContent h2 {
-        font-size: 24px;
-    }
-    .diceContent h4 {
-        font-size: 16px;
-    }
-
-    table img{
-        width: 85px;
-    }
-    button {
-        font-size: 15px;
-        padding: 4px 12px;
-    }
-    
+    border-color: rgb(0, 120, 20);
+    background-color: rgb(0, 70, 12);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    transform: translateY(-2px);
 }
